@@ -1,5 +1,5 @@
 # Get MIDORI Fasta and reformat header
-wget -S -P ./source/ https://www.reference-midori.info/forceDownload.php?fName=download/Databases/GenBank259_2023-12-17/BLAST/uniq/fasta/MIDORI2_UNIQ_NUC_GB259_lrRNA_BLAST.fasta.zip \
+wget -S -P ./source/ https://www.reference-midori.info/download/Databases/GenBank259_2023-12-17/BLAST/uniq/fasta/MIDORI2_UNIQ_NUC_GB259_lrRNA_BLAST.fasta.zip \
     && gunzip -c ./source/MIDORI2_UNIQ_NUC_GB259_lrRNA_BLAST.fasta.zip > ./source/MIDORI2_UNIQ_NUC_GB259_lrRNA_BLAST.fasta \
     && cut -d '#' -f1 ./source/MIDORI2_UNIQ_NUC_GB259_lrRNA_BLAST.fasta \
         | tr -d '<' \
